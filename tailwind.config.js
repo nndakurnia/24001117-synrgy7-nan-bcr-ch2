@@ -26,7 +26,7 @@ module.exports = {
         }],
         'preg': ['14px', {
           lineHeight: '20px',
-          fontWeight: '400',
+          fontWeight: '600',
         }],
         'title': ['16px', {
           lineHeight: '24px',
