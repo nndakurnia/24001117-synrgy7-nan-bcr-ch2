@@ -7,7 +7,7 @@ module.exports = {
         secondary: '#F1F3FF',
         banner: '#0D28A6',
         button: '#5CB85F',
-        abu: '#D4D4D4'
+        abu: '#D4D4D4',
       },
       fontFamily: {
         'sans': ['Helvetica', 'Arial', 'sans-serif'],
