@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/output.css" />
-    <title>Challenge 2</title>
+    <title>Binar Car Rental</title>
   </head>
   <body>
-    <header class="sticky top-0 z-50 bg-secondary">
-      <nav class="flex items-center justify-between flex-wrap px-[8%] py-5">
-        <div>
+    <header class="sticky top-0 z-50 bg-secondary font-sans">
+      <nav class="flex flex-wrap items-center justify-between px-[8%] py-5">
+        <div class="flex justify-between md:w-fit w-full">
           <img src="assets/images/logo.png" alt="logo" />
+          <button id="menu-btn" class="md:hidden">
+            <img src="assets/images/button_menu.png" alt="button_menu" />
+          </button>
         </div>
         <div class="md:block hidden">
-          <ul class="flex flex-row items-center gap-8 text-preg">
-            <li><a class="nav-link" href="#our-services">Our Services</a></li>
-            <li><a class="nav-link" href="#why-us">Why Us</a></li>
-            <li><a class="nav-link" href="#testimony">Testimonial</a></li>
-            <li><a class="nav-link" href="#faq">FAQ</a></li>
+          <ul class="flex items-center gap-6 text-preg">
+            <li><a href="#our-services">Our Services</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#testimony">Testimonial</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li>
               <button
                 class="rounded-sm bg-button px-3 py-2 text-button text-white"
@@ -28,19 +31,56 @@
             </li>
           </ul>
         </div>
+        <div id="hiddenDiv" class="hidden">
+          <div class="absolute top-0 right-0 min-h-screen w-full flex flex-row">
+            <div
+              id="overlay"
+              class="w-1/2 min-h-screen bg-black opacity-50"
+            ></div>
+            <div class="w-1/2 min-h-screen pl-6 pr-[8%] pt-6 bg-white">
+              <div class="flex flex-row justify-between mb-6">
+                <a class="text-title" href="#hero-section">BCR</a>
+                <button id="close-btn">
+                  <img
+                    src="assets/images/button_close.png"
+                    alt="button_close"
+                  />
+                </button>
+              </div>
+              <ul class="flex flex-col items-start gap-6 text-preg">
+                <li><a href="#our-services">Our Services</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#testimony">Testimonial</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li>
+                  <button
+                    class="rounded-sm bg-button px-3 py-2 text-button text-white"
+                  >
+                    Register
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main>
       <div class="min-h-[100vh] w-full flex flex-col bg-white mx-0 font-sans">
         <!-- Hero Section start -->
-        <section id="hero-section" class="h-[80vh] bg-secondary">
-          <div class="relative flex flex-row items-center gap-8 h-full px-[8%]">
-            <div class="flex flex-col gap-6">
-              <h1 class="text-h1 w-[560px]">
+        <section
+          id="hero-section"
+          class="md:h-[80vh] h-[90vh] bg-secondary"
+        >
+          <div
+            class="relative flex lg:items-center items-start h-full px-[8%]"
+          >
+            <div class="flex flex-col lg:gap-6 gap-3">
+              <h1 class="text-h1 max-sm:w-[350px] sm:w-[450px] md:w-[560px]">
                 Sewa & Rental Mobil Terbaik di Kawasan Probolinggo
               </h1>
-              <p class="text-plight w-[460px]">
+              <p class="text-plight w-[460px] max-xl:w-[380px] max-md:w-full">
                 Selamat datang di Binar Car Rental. Kami menyediakan mobil
                 kualitas terbaik dengan harga terjangkau. Selalu siap melayani
                 kebutuhanmu untuk sewa mobil selama 24 jam.
@@ -51,8 +91,10 @@
                 Mulai Sewa Mobil
               </button>
             </div>
-            <div class="absolute w-[700px] bottom-0 right-0">
-              <img src="assets/images/img_car.png" alt="car" />
+            <div
+              class="absolute w-[720px] max-sm:w-[460px] max-md:w-[550px] max-lg:w-[600px] max-xl:w-[600px] bottom-0 right-0"
+            >
+              <img src="assets/images/img_car.png" alt="car.png" />
             </div>
           </div>
         </section>
@@ -61,12 +103,12 @@
         <!-- Our Services Section start -->
         <section id="our-services">
           <div
-            class="flex flex-row items-center justify-center gap-16 mx-[8%] my-20"
+            class="flex md:flex-row flex-col items-center justify-center gap-16 mx-[8%] mt-20"
           >
-            <div class="w-[500px]">
+            <div class="md:w-[360px] lg:w-[500px] w-[300px]">
               <img src="assets/images/img_service.png" alt="services.png" />
             </div>
-            <div class="flex flex-col gap-5 w-5/12">
+            <div class="flex flex-col gap-5 md:w-5/12 w-full">
               <h2 class="text-h2">
                 Best Car Rental for any kind of trip in Probolinggo!
               </h2>
@@ -77,23 +119,23 @@
                 wedding, meeting, dll.
               </p>
               <ul class="flex flex-col gap-4 text-plight">
-                <li class="flex flex-row gap-4">
+                <li class="flex flex-row items-center gap-4">
                   <img src="assets/images/icon_checklist.png" />
                   <p>Sewa Mobil Dengan Supir di Bali 12 Jam</p>
                 </li>
-                <li class="flex flex-row gap-4">
+                <li class="flex flex-row items-center gap-4">
                   <img src="assets/images/icon_checklist.png" />
                   <p>Sewa Mobil Lepas Kunci di Bali 24 Jam</p>
                 </li>
-                <li class="flex flex-row gap-4">
+                <li class="flex flex-row items-center gap-4">
                   <img src="assets/images/icon_checklist.png" />
                   <p>Sewa Mobil Jangka Panjang Bulanan</p>
                 </li>
-                <li class="flex flex-row gap-4">
+                <li class="flex flex-row items-center gap-4">
                   <img src="assets/images/icon_checklist.png" />
                   <p>Gratis Antar - Jemput Mobil di Bandara</p>
                 </li>
-                <li class="flex flex-row gap-4">
+                <li class="flex flex-row items-center gap-4">
                   <img src="assets/images/icon_checklist.png" />
                   <p>Layanan Airport Transfer / Drop In Out</p>
                 </li>
@@ -105,13 +147,15 @@
 
         <!-- Why us Section start -->
         <section id="why-us">
-          <div class="flex flex-col gap-8 mx-[8%] my-20">
-            <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-8 mx-[8%] mt-20">
+            <div class="flex flex-col md:items-start items-center gap-4">
               <h2 class="text-h2">Why Us?</h2>
               <p class="text-plight">Mengapa harus pilih Binar Car Rental?</p>
             </div>
-            <div class="flex flex-row gap-6">
-              <div class="flex flex-col gap-4 w-[25%] border rounded-lg p-6">
+            <div class="flex flex-row max-md:flex-col max-lg:flex-wrap gap-6">
+              <div
+                class="flex flex-col gap-4 w-[24%] max-md:w-full max-lg:w-[48%] border rounded-lg p-6"
+              >
                 <img
                   src="assets/images/icon_like.png"
                   alt="icon_like"
@@ -123,7 +167,9 @@
                   terawat.
                 </p>
               </div>
-              <div class="flex flex-col gap-4 w-[25%] border rounded-lg p-6">
+              <div
+                class="flex flex-col gap-4 w-[24%] max-md:w-full max-lg:w-[48%] border rounded-lg p-6"
+              >
                 <img
                   src="assets/images/icon_price.png"
                   alt="icon_price"
@@ -135,7 +181,9 @@
                   rental mobil lain.
                 </p>
               </div>
-              <div class="flex flex-col gap-4 w-[25%] border rounded-lg p-6">
+              <div
+                class="flex flex-col gap-4 w-[24%] max-md:w-full max-lg:w-[48%] border rounded-lg p-6"
+              >
                 <img
                   src="assets/images/icon_24hrs.png"
                   alt="icon_24hrs"
@@ -147,7 +195,9 @@
                   tersedia di akhir minggu.
                 </p>
               </div>
-              <div class="flex flex-col gap-4 w-[25%] border rounded-lg p-6">
+              <div
+                class="flex flex-col gap-4 w-[24%] max-md:w-full max-lg:w-[48%] border rounded-lg p-6"
+              >
                 <img
                   src="assets/images/icon_professional.png"
                   alt="icon_professional"
@@ -166,7 +216,7 @@
 
         <!-- Testimonials Section start -->
         <section id="testimony">
-          <div class="flex flex-col gap-8 mx-[8%] my-20">
+          <div class="flex flex-col gap-8 mx-[8%] mt-20">
             <div class="flex flex-col justify-center items-center gap-4">
               <h2 class="text-h2">Testimonial</h2>
               <p class="text-plight">
@@ -174,119 +224,66 @@
               </p>
             </div>
             <!-- carousel start -->
-            <div
-              id="carouselControl"
-              class="carousel carousel-dark slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner flex flex-row gap-8">
-                <div class="carousel-item active">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="img-profile">
-                        <img
-                          src="assets/images/img_user1.png"
-                          alt="profil user"
-                        />
-                      </div>
-                      <div class="review">
-                        <img
-                          src="assets/images/icon_stars.png"
-                          alt="ratings"
-                          width="80px"
-                        />
-                        <p>
-                          “Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod lorem ipsum dolor sit amet,
-                          consectetur adipiscing elit, sed do eiusmod lorem
-                          ipsum dolor sit amet, consectetur adipiscing elit, sed
-                          do eiusmod”
-                        </p>
-                        <p>John Dee 32, Bromo</p>
-                      </div>
+            <div class="carousel-container mx-0 flex flex-col gap-6 relative">
+              <div class="carousel flex justify-center gap-6">
+                <div class="slide">
+                  <div class="flex md:flex-row flex-col justify-center items-center gap-6 px-8 py-14 rounded-xl border-abu bg-secondary">
+                    <div class="flex justify-center w-60">
+                      <img src="assets/images/img_user1.png">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <ul class="flex flex-row md:justify-start justify-center md:m-0 mb-4">
+                        <li><img src="assets/images/icon_star.png"></li>
+                        <li><img src="assets/images/icon_star.png"></li>
+                        <li><img src="assets/images/icon_star.png"></li>
+                        <li><img src="assets/images/icon_star.png"></li>
+                        <li><img src="assets/images/icon_star.png"></li>
+                      </ul>
+                      <p class="text-plight">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+                      <p class="text-preg font-semibold">John Dee 32, Bromo</p>
                     </div>
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="img-profile">
-                        <img
-                          src="assets/images/img_user2.png"
-                          alt="profil user"
-                        />
-                      </div>
-                      <div class="review">
-                        <img
-                          src="assets/images/icon_stars.png"
-                          alt="ratings"
-                          width="80px"
-                        />
-                        <p>
-                          “Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod lorem ipsum dolor sit amet,
-                          consectetur adipiscing elit, sed do eiusmod lorem
-                          ipsum dolor sit amet, consectetur adipiscing elit, sed
-                          do eiusmod”
-                        </p>
-                        <p>John Dee 32, Bromo</p>
-                      </div>
+                <div class="slide hidden">
+                  <div class="flex md:flex-row flex-col justify-center items-center gap-6 px-8 py-14 rounded-xl border-abu bg-secondary">
+                    <div class="flex justify-center w-60">
+                      <img src="assets/images/img_user2.png">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <ul class="flex flex-row md:justify-start justify-center md:m-0 mb-4">
+                        <li><img src="assets/images/icon_star.png"></li>
+                        <li><img src="assets/images/icon_star.png"></li>
+                        <li><img src="assets/images/icon_star.png"></li>
+                        <li><img src="assets/images/icon_star.png"></li>
+                        <li><img src="assets/images/icon_star.png"></li>
+                      </ul>
+                      <p class="text-plight">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+                      <p class="text-preg font-semibold">Pharita 28, Thai</p>
                     </div>
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="img-profile">
-                        <img
-                          src="assets/images/img_user3.png"
-                          alt="profil user"
-                        />
-                      </div>
-                      <div class="review">
-                        <img
-                          src="assets/images/icon_stars.png"
-                          alt="ratings"
-                          width="80px"
-                        />
-                        <p>
-                          “Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod lorem ipsum dolor sit amet,
-                          consectetur adipiscing elit, sed do eiusmod lorem
-                          ipsum dolor sit amet, consectetur adipiscing elit, sed
-                          do eiusmod”
-                        </p>
-                        <p>John Dee 32, Bromo</p>
-                      </div>
+                <div class="slide hidden">
+                  <div class="flex md:flex-row flex-col justify-center items-center gap-6 px-8 py-14 rounded-xl border-abu bg-secondary">
+                    <div class="flex justify-center w-60">
+                      <img src="assets/images/img_user3.png">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <ul class="flex flex-row md:justify-start justify-center md:m-0 mb-4">
+                        <li><img src="assets/images/icon_star.png"></li>
+                        <li><img src="assets/images/icon_star.png"></li>
+                        <li><img src="assets/images/icon_star.png"></li>
+                        <li><img src="assets/images/icon_star.png"></li>
+                        <li><img src="assets/images/icon_star.png"></li>
+                      </ul>
+                      <p class="text-plight">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+                      <p class="text-preg font-semibold">Wonwoo 28, Seoul</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="buttonControl">
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#carouselControl"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselControl"
-                  data-bs-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+              <div class="flex flex-row justify-center gap-6">
+                <button id="prev-button"><img src="assets/images/button_prev.png" alt="button_prev"></button>
+                <button id="next-button"><img src="assets/images/button_next.png" alt="button_next"></button>
               </div>
             </div>
             <!-- carousel end -->
@@ -297,18 +294,15 @@
         <!-- Getting Started Section start -->
         <section id="cta-banner">
           <div
-            class="flex flex-col justify-center items-center gap-5 py-16 mx-[8%] my-20 rounded-xl bg-banner"
+            class="flex flex-col justify-center items-center gap-5 px-20 py-16 mx-[8%] mt-20 rounded-xl bg-banner"
           >
-            <h1 class="text-h1 text-white">
+            <h1 class="text-h1 text-white text-center">
               Sewa Mobil di Probolinggo Sekarang
             </h1>
-            <center>
-              <p class="text-plight text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod <br />tempor incididunt ut labore et dolore magna
-                aliqua.
-              </p>
-            </center>
+            <p class="text-plight text-white text-center md:w-[480px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
             <button
               class="rounded-sm bg-button px-3 py-2 mt-8 text-button text-white"
             >
@@ -319,102 +313,109 @@
         <!-- Getting Started Section end -->
 
         <!-- Frequently Asked Question Section start -->
-        <section
-          id="faq"
-          class="flex flex-row justify-between mx-[8%] py-20 h-[500px]"
-        >
-          <div class="flex flex-col gap-4">
-            <h2 class="text-h2">Frequently Asked Question</h2>
-            <p class="text-plight">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
-            </p>
+        <section id="faq">
+          <div
+            class="flex md:flex-row flex-col justify-between gap-8 mx-[8%] py-20 lg:h-[500px] max-md:h-[620px] md:h-[510px]"
+          >
+            <div class="flex flex-col md:items-start items-center gap-4">
+              <h2 class="text-h2">Frequently Asked Question</h2>
+              <p class="text-plight">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              </p>
+            </div>
+            <!-- accordion start -->
+            <div class="accordion grid gap-4 md:w-7/12 w-full text-plight">
+              <div class="accordion-item cursor-pointer">
+                <h2
+                  class="accordion-header flex flex-row justify-between items-center gap-4 border border-abu rounded-md px-6 py-4"
+                >
+                  <button class="accordion-button text-left">
+                    Apa saja syarat yang dibutuhkan?
+                  </button>
+                  <img src="assets/images/icon_down.png" />
+                </h2>
+                <div
+                  class="accordion-content border-x border-b rounded-b-md px-6 py-4 hidden"
+                >
+                  KTP dan SIM yang berlaku.
+                </div>
+              </div>
+              <div class="accordion-item cursor-pointer">
+                <h2
+                  class="accordion-header flex flex-row justify-between items-center gap-4 border border-abu rounded-md px-6 py-4"
+                >
+                  <button class="accordion-button text-left">
+                    Berapa hari minimal sewa mobil lepas kunci?
+                  </button>
+                  <img src="assets/images/icon_down.png" />
+                </h2>
+                <div
+                  class="accordion-content border-x border-b rounded-b-md px-6 py-4 hidden"
+                >
+                  Minimal 2 hari sewa.
+                </div>
+              </div>
+              <div class="accordion-item cursor-pointer">
+                <h2
+                  class="accordion-header flex flex-row justify-between items-center gap-4 border border-abu rounded-md px-6 py-4"
+                >
+                  <button class="accordion-button text-left">
+                    Berapa hari sebelumnya sebaiknya booking sewa mobil?
+                  </button>
+                  <img src="assets/images/icon_down.png" />
+                </h2>
+                <div
+                  class="accordion-content border-x border-b rounded-b-md px-6 py-4 hidden"
+                >
+                  Maksimal sehari sebelumnya.
+                </div>
+              </div>
+              <div class="accordion-item cursor-pointer">
+                <h2
+                  class="accordion-header flex flex-row justify-between items-center gap-4 border border-abu rounded-md px-6 py-4"
+                >
+                  <button class="accordion-button text-left">
+                    Apakah ada biaya antar-jemput?
+                  </button>
+                  <img src="assets/images/icon_down.png" />
+                </h2>
+                <div
+                  class="accordion-content border-x border-b rounded-b-md px-6 py-4 hidden"
+                >
+                  Untuk batas jarak maksimal 16 KM akan dikenakan biaya
+                  Rp150.000. Apabila pengantaran lebih dari 16 KM akan dikenakan
+                  biaya tambahan sebesar Rp50.000.
+                </div>
+              </div>
+              <div class="accordion-item cursor-pointer">
+                <h2
+                  class="accordion-header flex flex-row justify-between items-center gap-4 border border-abu rounded-md px-6 py-4"
+                >
+                  <button class="accordion-button text-left">
+                    Bagaimana jika terjadi kecelakaan?
+                  </button>
+                  <img src="assets/images/icon_down.png" />
+                </h2>
+                <div
+                  class="accordion-content border-x border-b rounded-b-md px-6 py-4 hidden"
+                >
+                  Kecelakaan yang disebabkan oleh sopir kami akan ditanggung
+                  oleh kami. Selain hal tersebut, biaya kecelakaan ditanggung
+                  penyewa.
+                </div>
+              </div>
+            </div>
+            <!-- accordion end -->
           </div>
-          <!-- accordion start -->
-          <div class="accordion grid gap-4 w-7/12 text-plight">
-            <div class="accordion-item cursor-pointer">
-              <h2
-                class="accordion-header flex flex-row justify-between border rounded-md px-6 py-4"
-              >
-                <button class="accordion-button">
-                  Apa saja syarat yang dibutuhkan?
-                </button>
-                <img src="assets/images/icon_down.png" />
-              </h2>
-              <div
-                class="accordion-content border-x border-b rounded-b-md px-6 py-4 hidden"
-              >
-                Content for Accordion Item #1
-              </div>
-            </div>
-            <div class="accordion-item cursor-pointer">
-              <h2
-                class="accordion-header flex flex-row justify-between border rounded-md px-6 py-4"
-              >
-                <button class="accordion-button">
-                  Berapa hari minimal sewa mobil lepas kunci?
-                </button>
-                <img src="assets/images/icon_down.png" />
-              </h2>
-              <div
-                class="accordion-content border-x border-b rounded-b-md px-6 py-4 hidden"
-              >
-                Content for Accordion Item #2
-              </div>
-            </div>
-            <div class="accordion-item cursor-pointer">
-              <h2
-                class="accordion-header flex flex-row justify-between border rounded-md px-6 py-4"
-              >
-                <button class="accordion-button">
-                  Berapa hari sebelumnya sebaiknya booking sewa mobil?
-                </button>
-                <img src="assets/images/icon_down.png" />
-              </h2>
-              <div
-                class="accordion-content border-x border-b rounded-b-md px-6 py-4 hidden"
-              >
-                Content for Accordion Item #3
-              </div>
-            </div>
-            <div class="accordion-item cursor-pointer">
-              <h2
-                class="accordion-header flex flex-row justify-between border rounded-md px-6 py-4"
-              >
-                <button class="accordion-button">
-                  Apakah ada biaya antar-jemput?
-                </button>
-                <img src="assets/images/icon_down.png" />
-              </h2>
-              <div
-                class="accordion-content border-x border-b rounded-b-md px-6 py-4 hidden"
-              >
-                Content for Accordion Item #4
-              </div>
-            </div>
-            <div class="accordion-item cursor-pointer">
-              <h2
-                class="accordion-header flex flex-row justify-between border rounded-md px-6 py-4"
-              >
-                <button class="accordion-button">
-                  Bagaimana jika terjadi kecelakaan?
-                </button>
-                <img src="assets/images/icon_down.png" />
-              </h2>
-              <div
-                class="accordion-content border-x border-b rounded-b-md px-6 py-4 hidden"
-              >
-                Content for Accordion Item #5
-              </div>
-            </div>
-          </div>
-          <!-- accordion end -->
         </section>
         <!-- Frequently Asked Question Section end -->
       </div>
     </main>
 
     <footer>
-      <div class="flex flex-row justify-between font-sans mx-[8%] my-20">
+      <div
+        class="flex md:flex-row flex-col justify-between gap-6 font-sans mx-[8%] mt-32 mb-20"
+      >
         <div class="flex flex-col gap-4 text-plight">
           <p>
             Jalan Suroyo No. 161 Mayangan Kota <br />
